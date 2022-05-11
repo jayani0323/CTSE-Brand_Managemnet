@@ -1,11 +1,5 @@
 import * as express from "express";
-import ProductController from "../controllers/ProductController";
-import CustomerController from "../controllers/CustomerController";
-import UserController from '../controllers/UserController';
-import CategoryController from "../controllers/CategoryController";
 import BrandController from "../controllers/BrandController";
-import LoginController from '../controllers/LoginController';
-import OrderController from '../controllers/OrderController';
 import {multerMiddleWare} from "../middleware/multer";
 
 export default function setRoutes(app:any){

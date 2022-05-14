@@ -140,13 +140,17 @@ export default class BrandController{
         this.logger.info("BrandController - updateBrandStatus()");
         const id = req.body.id;
         const status = req.body.status;
-        await this.brandService.updateBrandStatus(id,status)
-            .then(data => {
-                res.status(200).send(data);
-            })
-            .catch(error => {
-                this.logger.error(error.message);
-                res.status(500).send({err: error.message});
-            })
+        // await this.brandService.updateBrandStatus(id,status)
+        //     .then(data => {
+        //         res.status(200).send(data);
+        //     })
+            // .catch(error => {
+            //     this.logger.error(error.message);
+            //     res.status(500).send({err: error.message});
+            // })
     }
 }
+
+
+
+

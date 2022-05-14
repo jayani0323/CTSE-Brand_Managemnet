@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ctse
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brand-management-deployment
+  namespace: ctse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brand-management
+  template:
+    metadata:
+      labels:
+        app: brand-management
+    spec:
+      containers:
+        - name: brand-management
+          image: jayanisaumya/brandapi:latest
+          ports:
+            - containerPort: 3007
+          envFrom:
+            - configMapRef:
+                name: brand-management-config
+
+---
+

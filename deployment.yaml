@@ -28,5 +28,4 @@ spec:
             - configMapRef:
                 name: brand-management-config
 
----
 

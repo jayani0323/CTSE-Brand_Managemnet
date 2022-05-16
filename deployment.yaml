@@ -22,11 +22,18 @@ spec:
       containers:
         - name: brand-management
           image: jayanisaumya/brandapi:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
           ports:
-            - containerPort: 3007
+            - containerPort: 3000
           envFrom:
             - configMapRef:
                 name: brand-management-config
-
 ---
 

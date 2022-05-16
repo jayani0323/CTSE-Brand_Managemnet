@@ -31,7 +31,7 @@ spec:
               memory: "1Gi"
               cpu: "500m"
           ports:
-            - containerPort: 3000
+            - containerPort: 3007
           envFrom:
             - configMapRef:
                 name: brand-management-config

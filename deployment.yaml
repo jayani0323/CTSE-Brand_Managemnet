@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: brand-management
-          image: jayanisaumya/brandapi:latest
+          image: jayanisaumya/brand-management:latest
           imagePullPolicy: Always
           resources:
             requests:
